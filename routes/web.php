@@ -35,7 +35,7 @@ Route::middleware('auth')->group(function () {
 
 
 /** ADMIN ROUTES */
-Route::group(['as'=>'admin.','prefix'=>'/admin','middleware'=>'auth'],function(){
+Route::group(['as'=>'admin.','prefix'=>'/admin','middleware'=>['auth'],],function(){
 
     Route::get('/trips',TripHomeController::class)->name('trips');
     Route::resource('/trip',TripSaveController::class);
