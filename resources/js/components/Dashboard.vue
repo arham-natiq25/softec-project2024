@@ -1,5 +1,5 @@
 <template>
     <div>
-        Dashboaord hun
+        Dashboard component
     </div>
 </template>

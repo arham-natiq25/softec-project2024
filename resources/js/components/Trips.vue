@@ -149,11 +149,11 @@ export default {
         // Method for saving trip
         saveTrips() {
             let method = axios.post;
-            let url = "/api/trips";
+            let url = "/admin/trip";
 
             if (this.isEditing) {
                 method = axios.put;
-                url = `/api/trips/${this.temp_id}`;
+                url = `/admin/trip/${this.temp_id}`;
             }
            method(url, this.items).then((res) => {
                 this.errors = {}
